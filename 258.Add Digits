@@ -1,0 +1,19 @@
+258.Add Digits
+https://leetcode.com/problems/add-digits
+
+
+/**
+ * @param {number} num
+ * @return {number}
+ */
+var addDigits = function(num) {
+    var x=0;
+    if(num>9){while(num>0){
+        x=x+num%10;
+        num=Math.floor(num/10);
+        console.log(num)
+    }
+    return addDigits(x);}
+    else{return num;}
+    
+};
